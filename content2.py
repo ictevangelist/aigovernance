@@ -224,6 +224,31 @@ _ch.write_text(_ch.read_text(encoding="utf-8").replace(
     '<meta name="robots" content="index, follow">',
     '<meta name="robots" content="noindex, nofollow">'), encoding="utf-8")
 
+# ------------------------------------------------ WHAT'S CHANGED
+changed_body = banner("Site log", 'What\u2019s <span class="accent">changed</span>',
+  "Significant updates to this site and the guidance behind it, most recent first.") + f"""
+  <p class="lead">Law and guidance move, and so does this site. This page records the significant updates, so you can see at a glance that what you\u2019re reading reflects the current framework. The date here matches the \u201cGuidance reviewed\u201d note in the footer of every page.</p>
+
+  <h2>September 2026</h2>
+  <ul>
+    <li>Updated for KCSIE 2026, in force from 1 September 2026.</li>
+    <li>Reviewed against current DfE generative AI guidance, including the generative AI product safety standards.</li>
+    <li>Updated safeguarding and governance references.</li>
+    <li>Clarified DPIA expectations: what the law requires, and the stronger standard this policy recommends.</li>
+    <li>Added practical decision, ownership and evidence notes to each governance section, and task-based routes from the homepage.</li>
+  </ul>
+
+  <h2>July 2026</h2>
+  <ul>
+    <li>Site published, as the companion to the <em>Use of AI Policy</em> template written for adoption from September 2026.</li>
+  </ul>
+
+  <p class="chart-note">Only significant changes are recorded here. For the sources themselves, at their current versions, see the <a href="references.html">references</a> and the <a href="guidance-map.html">guidance map</a>.</p>
+"""
+write("whats-changed.html", "What\u2019s changed | " + build.BRAND_TITLE,
+      "Significant updates to this AI governance resource and the guidance behind it, most recent first.",
+      changed_body, ORG_LD)
+
 # ------------------------------------------------ PRIVACY NOTICE
 priv_body = banner("Legal", '<span class="accent">Privacy notice</span>',
   "How this site handles information, including the sign-up you complete to unlock the DPIA screening tool.", crumbs=True) + f"""

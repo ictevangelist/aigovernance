@@ -269,6 +269,17 @@ h1, h2 { font-family: var(--font-display); }
 .keypoints { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.6rem; box-shadow: var(--shadow); margin: 1.6rem 0; }
 .keypoints h3 { margin-top: 0; font-family: var(--font-head); font-weight: 600; color: var(--ink); }
 
+/* ---------- Practical box: decision, owner, evidence ---------- */
+.practical {
+  background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--charcoal);
+  border-radius: 0 var(--radius) var(--radius) 0; padding: 1.3rem 1.5rem; margin: 2rem 0;
+}
+.practical h3 { margin: 0 0 .7rem; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); font-family: var(--font-head); font-weight: 600; }
+.practical dl { margin: 0; }
+.practical dt { font-weight: 600; color: var(--brand-deep); margin: .7rem 0 0; font-size: .95rem; }
+.practical dt:first-child { margin-top: 0; }
+.practical dd { margin: .15rem 0 0; max-width: none; }
+
 /* ---------- Charts ---------- */
 .chart-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; margin: 1.6rem 0; }
 .chart-block h3 { margin-top: 0; color: var(--ink); font-family: var(--font-head); font-weight: 600; }
@@ -393,7 +404,7 @@ table.pricing th:last-child { background-color: #2a3441; }
 @media (prefers-contrast: more) {
   :root { --ink: #0d1620; --ink-soft: #2f3d48; --border: #9fb1bb; --brand-deep: #0a6b7d; }
   a { text-decoration: underline; }
-  .card, .stat, .chart-block, .keypoints, .commentary, .pullquote, .nav-grid a, .page-nav a { border-color: #8fa2ac; }
+  .card, .stat, .chart-block, .keypoints, .commentary, .pullquote, .practical, .nav-grid a, .page-nav a { border-color: #8fa2ac; }
   .main-nav a[aria-current="page"], .nav-grid a[aria-current="page"] { outline: 2px solid var(--brand-deep); outline-offset: -2px; }
   .stat__label, .chart-note, .crumbs, .card p { color: var(--ink-soft); }
 }
@@ -403,6 +414,7 @@ html.a11y-contrast { --ink: #0d1620; --ink-soft: #2f3d48; --border: #9fb1bb; --b
 html.a11y-contrast a { text-decoration: underline; }
 html.a11y-contrast .card, html.a11y-contrast .stat, html.a11y-contrast .chart-block,
 html.a11y-contrast .keypoints, html.a11y-contrast .commentary, html.a11y-contrast .pullquote,
+html.a11y-contrast .practical,
 html.a11y-contrast .nav-grid a, html.a11y-contrast .page-nav a { border-color: #8fa2ac; }
 html.a11y-contrast .main-nav a[aria-current="page"], html.a11y-contrast .nav-grid a[aria-current="page"] { outline: 2px solid var(--brand-deep); outline-offset: -2px; }
 html.a11y-contrast .stat__label, html.a11y-contrast .chart-note, html.a11y-contrast .crumbs, html.a11y-contrast .card p { color: var(--ink-soft); }

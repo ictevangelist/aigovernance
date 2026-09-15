@@ -21,7 +21,8 @@ ASSET_V = _hashlib.md5(b"".join(
 )).hexdigest()[:8]
 
 # ---- Structured data shared by every page (AEO/GEO) ----
-REVIEWED = "2026-07-23"   # bump when site content is materially updated
+REVIEWED = "2026-09-15"   # bump when site content is materially updated
+REVIEW_LABEL = "September 2026"  # human-readable form, shown on the homepage and in the footer
 
 PERSON_LD = {
     "@type": "Person",
@@ -194,6 +195,7 @@ FOOTER = f"""</main>
       </div>
     </div>
     <div class="footer-credit">
+      <p>Guidance reviewed: <strong>{REVIEW_LABEL}</strong> &middot; <a href="whats-changed.html" style="color:#cfe0ea;">What&rsquo;s changed</a></p>
       <p>Produced by <strong>{html.escape(AUTHOR)}</strong>. The policy template and DPIA screening tool are shared under a
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color:#cfe0ea;">Creative Commons BY-NC-SA 4.0</a>&nbsp;licence.</p>
       <p class="footer-legal">This site offers general information, not legal advice. Responsibility for compliance rests with the adopting organisation.
@@ -239,6 +241,17 @@ def keypoints(title, items):
 
 def nonneg(text):
     return f'<div class="commentary" style="border-left-color:#c0392b;"><h3 style="color:#a04000;">A non-negotiable</h3><p>{text}</p></div>'
+
+def practical(decision, owner, evidence):
+    """The end-of-section practical box: the decision, its owner, the evidence."""
+    return f"""<div class="practical">
+  <h3>In practice</h3>
+  <dl>
+    <dt>Decision to make</dt><dd>{decision}</dd>
+    <dt>Who owns this?</dt><dd>{owner}</dd>
+    <dt>Evidence to retain</dt><dd>{evidence}</dd>
+  </dl>
+</div>"""
 
 def quote_band(text, name, role, reopen="container prose"):
     """A full-width charcoal pull-quote band. Closes the current content
