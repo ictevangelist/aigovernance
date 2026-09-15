@@ -102,16 +102,6 @@ home_body = f"""<section class="hero">
   {quote_band("Don’t think twice about it. Mark has a significant amount of expertise, and is incredibly generous with sharing it. His values are clear and shine through in all his interactions.",
               "Julie Carson", "Deputy CEO, Woodland Academy Trust", reopen="container")}
 
-  <h2 class="mt-0" style="margin-top:2rem;">Or dip straight into a section</h2>
-  <div class="card-grid" style="margin-top:1.2rem;">
-    <a class="card card--link" href="landscape.html"><h3>The landscape</h3><p>Why you need a policy now, what counts as “AI”, and the law and guidance that applies to you.</p><span class="more">Read &rsaquo;</span></a>
-    <a class="card card--link" href="approved-tools.html"><h3>Approved tools</h3><p>The heart of the policy: how a tool becomes approved, and why “not approved” is the starting point.</p><span class="more">Read &rsaquo;</span></a>
-    <a class="card card--link" href="data-protection.html"><h3>Data protection</h3><p>The rule on personal data, your lawful basis, controllers and processors, and how long data is kept.</p><span class="more">Read &rsaquo;</span></a>
-    <a class="card card--link" href="impact-assessment.html"><h3>Impact assessment</h3><p>When you need a DPIA, what a product-safety check covers, and a free tool to get you started.</p><span class="more">Read &rsaquo;</span></a>
-    <a class="card card--link" href="safeguarding.html"><h3>Safeguarding &amp; Prevent</h3><p>Deepfakes, online-safety duties, and how an AI concern reaches your designated safeguarding lead.</p><span class="more">Read &rsaquo;</span></a>
-    <a class="card card--link" href="pupil-use.html"><h3>Pupil use</h3><p>The optional module, and the two conditions to meet before pupils use AI at all.</p><span class="more">Read &rsaquo;</span></a>
-  </div>
-
   <h2>The non-negotiables</h2>
   <p>As with many policies there need to be non-negotiables that help colleagues understand what they can and what they can’t do. In this AI policy there are 5 distinct areas which really must be non-negotiables. I’ve explained below what each of them are and why they are so important that they are, non-negotiable…</p>
   <div class="card-grid">
@@ -448,7 +438,7 @@ PAGES.append(("impact-assessment.html", "Impact assessment", "Section 10 of the 
   </div>
 
   <h2>What it is</h2>
-  <p>The trigger and the process: a DPIA before you deploy AI that processes personal data; the product-safety checks that align to the DfE generative AI product safety standards; and the point in procurement where these happen, which is during tool approval, not after go-live. It sets out who coordinates the assessment (your DPO or data protection lead) and who signs it off.</p>
+  <p>The trigger and the process: a DPIA before you deploy AI that processes personal data; the product-safety checks that align to the DfE generative AI product safety standards; and the point in procurement where these happen, which is during <a href="approved-tools.html">tool approval</a>, not after go-live. It sets out who coordinates the assessment (your DPO or data protection lead) and who signs it off.</p>
 
   <h2>Why it’s important</h2>
   <p>A DPIA completed after a tool is already embedded changes very little; the decisions have been made. Completed early, it brings the controller and processor question, international transfers, retention, sub-processors, and any training on your data into view before you’re committed. A tool that lacks a particular compliance feature isn’t ruled out automatically: the question is whether you can put sensible operational safeguards around it, and record them.</p>
