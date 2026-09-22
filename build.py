@@ -17,7 +17,7 @@ OUT = pathlib.Path(__file__).parent
 # GitHub Pages' 10-minute asset cache can never serve stale styles.
 import hashlib as _hashlib
 ASSET_V = _hashlib.md5(b"".join(
-    (OUT / p).read_bytes() for p in ("css/styles.css", "js/nav.js", "js/a11y.js", "js/consent.js")
+    (OUT / p).read_bytes() for p in ("css/styles.css", "js/nav.js", "js/a11y.js")
 )).hexdigest()[:8]
 
 # ---- Structured data shared by every page (AEO/GEO) ----
@@ -109,6 +109,8 @@ def head(title, desc, canonical, jsonld=None):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H68TL4KVNG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("consent","default",{{"analytics_storage":"denied","ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied"}});gtag("js",new Date());gtag("config","G-H68TL4KVNG");</script>
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{canonical}">
@@ -205,7 +207,6 @@ FOOTER = f"""</main>
 </footer>
 <script src="js/nav.js?v={ASSET_V}" defer></script>
 <script src="js/a11y.js?v={ASSET_V}" defer></script>
-<script src="js/consent.js?v={ASSET_V}" defer></script>
 </body>
 </html>
 """
